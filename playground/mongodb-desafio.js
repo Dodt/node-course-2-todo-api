@@ -9,13 +9,13 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client) => {
     const db = client.db('TodoApp');
 
 
-    db.collection('Users').find({ name: 'Paulo Vieira' }).count().then((count) => {
+    db.collection('Users').find({ name: 'Joh Doe' }).count().then((count) => {
         console.log(`Users:${count}`);
     }, (err) => {
         console.log('Unable to fetch the data');
     });
 
-    db.collection('Users').find({ name: 'Paulo Vieira' }).toArray().then((docs)=>{
+    db.collection('Users').find({ name: 'John Doe' }).toArray().then((docs)=>{
         console.log(JSON.stringify(docs, undefined, 2));    
     },(err)=>{
         console.log('Unable to fetch the data');

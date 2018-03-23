@@ -7,23 +7,16 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client) => {
     }
     console.log('Connect to MongoDB server');
     const db = client.db('TodoApp');
-    
-    //deleteMany
-/*
-    db.collection('Todos').deleteMany({text:'Buy a new car'}).then((result)=>{
-        console.log(result);
-    });
-*/
-    //deleteOne
 
+    //delete many
 /*
-    db.collection('Todos').deleteOne({text:'eat lunch'}).then((result)=>{
+    db.collection('Users').deleteMany({name: 'John Doe'}).then((result)=>{
         console.log(result);
     });
 */
 
-    db.collection('Todos').findOneAndDelete({completed: false}).then((result)=>{
+
+    db.collection('Users').findOneAndDelete({ _id: new ObjectID('5ab4042c687edc82c51503d2')}).then((result)=>{
         console.log(result);
     });
-
 });
