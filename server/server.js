@@ -1,10 +1,10 @@
-let express = require('express');
-let bodyParser = require('body-parser');
+const express = require('express');
+const bodyParser = require('body-parser');
 
 
-let {mongoose} = require('./db/mongoose');
-let {Todo} = require('./models/todo');
-let {User} = require('./models/user');
+const {mongoose} = require('./db/mongoose');
+const {Todo} = require('./models/todo');
+const {User} = require('./models/user');
 
 var app = express();
 
