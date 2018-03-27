@@ -44,4 +44,4 @@ User.findById(id).then((user)=>{
         return console.log('ID NOT FOUND');
     };
     console.log(`User By ID:\n ${JSON.stringify(user,undefined,2)}`);
-}).catch((e)=> console.log(e));
+}).catch((e)=> console.log(e)) ;
