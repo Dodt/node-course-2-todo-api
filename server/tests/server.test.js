@@ -143,9 +143,10 @@ describe('DELETE /todos/:id',()=>{
     });
 });
 
+
 describe('PATCH /todos/:id',()=>{
 
-    it('should update the todo',(done)=>{
+    it('should update the todo2',(done)=>{
         let hexId = todos[0]._id.toHexString();
         let text = "First Todo modified";
 
