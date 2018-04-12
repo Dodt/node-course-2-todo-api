@@ -135,7 +135,7 @@ describe('DELETE /todos/:id',()=>{
             .end(done)
     });
 
-    it('should return 404 if object id is invalid',(done)=>{
+    it('should return 404 if object id is oi invalid',(done)=>{
         request(app)
             .delete('/todos/123ab the DELETE /todos/:id')
             .expect(404)
